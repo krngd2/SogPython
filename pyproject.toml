@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sogpy"
-version = "1.0.1"
+version = "1.0.2"
 description = "Convert Gaussian Splat PLY files to PlayCanvas SOG format"
 readme = "README.md"
 license = {text = "MIT"}
