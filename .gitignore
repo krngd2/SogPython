@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Test files
+*.ply
+*.sog
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+.env

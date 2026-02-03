@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sogpy"
+version = "1.0.0"
+description = "Convert Gaussian Splat PLY files to PlayCanvas SOG format"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Sai Kiran Nunemunthala"}
+]
+keywords = ["gaussian-splatting", "3d", "playcanvas", "sog", "ply", "webp", "compression"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Graphics :: 3D Modeling",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "Pillow>=9.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/saikirannunemunthala/sogpy"
+Repository = "https://github.com/saikirannunemunthala/sogpy"
+Issues = "https://github.com/saikirannunemunthala/sogpy/issues"
+
+[project.scripts]
+sogpy = "SogPython.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["SogPython*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311", "py312"]
